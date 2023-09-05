@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pendaftaran</title>
+  </head>
+  <body>
+    <h1>Formulir Pendaftaran SIB arkatama</h1>
+    <form action="proses_pendaftaran.php" method="POST" enctype="multipart/form-data">
+      <!-- Nama -->
+      <p>
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required /><br />
+      </p>
+      <!-- Email -->
+      <p>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br />
+      </p>
+
+      <!-- Nomor HP -->
+      <p>
+        <label for="nomor_hp">Nomor HP:</label>
+        <input type="tel" id="nomor_hp" name="nomor_hp" required /><br />
+      </p>
+
+      <!-- Jenis Kelamin -->
+      <p>
+        <label>Jenis Kelamin:</label>
+        <input type="radio" id="laki-laki" name="jenis_kelamin" value="Laki-laki" />
+        <label for="laki-laki">Laki-laki</label>
+        <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" />
+        <label for="perempuan">Perempuan</label><br />
+      </p>
+
+      <!-- Prodi -->
+      <p>
+        <label for="prodi">Prodi:</label>
+        <select id="prodi" name="prodi">
+          <option value="Teknik Informatika">Teknik Informatika</option>
+          <option value="Sistem Informasi">Sistem informasi</option>
+          <option value="computer sience">Computer sience</option>
+          <option value="lainya">Lainya</option>
+          <!-- Tambahkan prodi-prodi lainnya --></select
+        ><br />
+      </p>
+
+      <!-- Hobi -->
+      <p>
+        <label>Hobi:</label>
+        <input type="checkbox" id="membaca" name="hobi[]" value="Membaca" />
+        <label for="membaca">Membaca</label>
+        <input type="checkbox" id="berenang" name="hobi[]" value="Berenang" />
+        <label for="berenang">Berenang</label>
+        <input type="checkbox" id="olahraga" name="hobi[]" value="Olahraga" />
+        <label for="olahraga">Olahraga</label><br />
+      </p>
+
+      <!-- Alamat -->
+      <p>
+        <label for="alamat">Alamat:</label><br />
+        <textarea id="alamat" name="alamat" rows="4" cols="50" required></textarea><br />
+      </p>
+
+      <!-- Foto Diri -->
+      <p>
+        <label for="foto_diri">Foto Diri (Max 2MB):</label>
+        <input type="file" id="foto_diri" name="foto_diri" accept="image/*" required /><br />
+      </p>
+
+      <!-- Tombol Daftar -->
+      <p>
+        <input type="submit" value="Daftar" />
+      </p>
+    </form>
+  </body>
+</html>
